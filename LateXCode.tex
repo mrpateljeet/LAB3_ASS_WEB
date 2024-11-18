@@ -1,0 +1,169 @@
+\documentclass{article}
+\usepackage{graphicx} % For including images
+\usepackage{listings} % For code blocks if needed
+\usepackage{hyperref} % For hyperlinks
+
+\title{Lab 3 Report}
+\author{JEET PATEL}
+\date{18 NOV, 2024}
+
+\begin{document}
+\maketitle
+\section*{GitHub Repository}
+\url{https://github.com/mrpateljeet/LAB3_ASS_WEB}
+\section*{Task 1 (Total 40 Points)}
+
+\subsection*{A) Screenshots of Your App (5 Points)}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{image1.png} 
+    \caption{Hello Page First Native App}
+    \label{fig:screenshot1}
+\end{figure}
+
+% Adding the seven images
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{image1.png} 
+    \caption{Hello Page First Native App}
+    \label{fig:screenshot1}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{image2.png} 
+    \caption{Installation Part(Homebrew)}
+    \label{fig:screenshot2}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{image3.png} 
+    \caption{connection successfully }
+    \label{fig:screenshot3}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{image4.png} 
+    \caption{User can add task by clicking "+" Button}
+    \label{fig:screenshot4}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{image5.png} 
+    \caption{User can Edit task by clicking on "Edit"}
+    \label{fig:screenshot5}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{image6.png} 
+    \caption{ User can successfully edit/Update task at same time}
+    \label{fig:screenshot6}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\textwidth]{image7.png}
+    \caption{By generating this QR code connect Phone via Expo Go}
+    \label{fig:screenshot7}
+\end{figure}
+\subsection*{B) Differences Between Running the App on an Emulator versus a Physical Device}
+
+When running the app on an emulator and a physical device, you may notice the following differences:
+\begin{itemize}
+    \item \textbf{Performance:} The physical device often runs the app more smoothly, with faster load times and fewer lags, especially with animations. Emulators may be slower, particularly on machines with limited resources.
+    \item \textbf{User Interaction:} The physical device allows real touch gestures, like swipes and pinches, whereas the emulator mimics touch with mouse clicks, which isn’t as precise.
+    \item \textbf{Hardware-Specific Features:} Certain features, like the camera or sensors, may not work as expected on an emulator but function correctly on a physical device.
+    \item \textbf{Screen Resolution and Display:} Physical devices show the actual display quality, including color and brightness. Emulators approximate this, but physical devices may reveal UI issues related to screen size and aspect ratio more accurately.
+\end{itemize}
+
+\subsection*{2) Setting Up an Emulator (10 Points)}
+
+\subsubsection*{A) Steps to Set Up an Emulator in Android Studio or Xcode}
+\begin{enumerate}
+    \item \textbf{Install Xcode:} Download Xcode from the Mac App Store and open it once installed, following any initial setup instructions.
+    \item \textbf{Set Command Line Tools:} Go to Xcode, Preferences, Locations tab and select the version of Xcode you installed under Command Line Tools.
+    \item \textbf{Open the Simulator:} Open the Simulator from Xcode by navigating to Xcode, Open Developer Tool, Simulator.
+    \item \textbf{Set Up a New iOS Simulated Device:} Go to Window, Devices, and Simulators, click the Simulators tab, press the + button to add a new simulator, and click Create.
+    \item \textbf{Start the Simulator:} Select the newly created simulator in the Devices and Simulators window and click Start to launch it.
+\end{enumerate}
+
+\subsubsection*{B) Challenges Faced and Solutions}
+\begin{itemize}
+    \item \textbf{SDK Version Compatibility:} Selecting a stable or recommended SDK version resolved compatibility issues.
+    \item \textbf{Slow Performance:} Increasing RAM allocation for the emulator in AVD settings improved performance.
+    \item \textbf{Device-Specific Issues:} Switching to another device model or Android version resolved unique bugs or crashes.
+\end{itemize}
+
+\subsection*{3) Running the App on a Physical Device Using Expo (10 Points)}
+
+\subsubsection*{A) Connecting the Physical Device}
+Installed the Expo CLI using the command \texttt{npm install -g expo-cli}. Expo Developer Tools opened in the browser, displaying a QR code. Installed the Expo Go App from the Apple Store, scanned the QR code with the device, and loaded the app.
+
+\subsubsection*{B) Troubleshooting Steps}
+\begin{table}
+    \centering
+    \begin{tabular}{|p{0.2\textwidth}|p{0.35\textwidth}|p{0.35\textwidth}|}
+        \hline
+        \textbf{Aspect} & \textbf{Emulator} & \textbf{Physical Device} \\
+        \hline
+        Performance & Slower on lower-end machines & Faster, showing real-world app performance \\
+        \hline
+        Touch Accuracy & Simulated with mouse clicks & Natural touch gestures \\
+        \hline
+        Hardware Access & Limited access (e.g., camera, GPS) & Full access to all hardware features \\
+        \hline
+        Screen Quality & Approximate colors and resolution & True screen quality and color display \\
+        \hline
+        Testing Scope & Easy to test on multiple devices & Limited to a specific device \\
+        \hline
+    \end{tabular}
+    \caption{Comparison of Emulator vs. Physical Device}
+    \label{tab:emulator-vs-physical}
+\end{table}
+
+
+% Separate figure environment outside of the table
+\begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{image2.png} % Replace 'image2.png' with your actual image file
+    \caption{Installation}
+    \label{fig:enter-label}
+\end{figure}
+
+
+\textbf{Advantages and Disadvantages}
+\begin{itemize}
+    \item \textbf{Advantages of Emulator:} Quick testing on various versions and screen sizes; simulated environment without physical devices.
+    \item \textbf{Advantages of Physical Device:} Accurate representation of real-world usage; access to hardware-dependent features.
+    \item \textbf{Disadvantages of Emulator:} Slower performance, limited hardware access, inaccurate display.
+    \item \textbf{Disadvantages of Physical Device:} Limited to single device testing, network dependency.
+\end{itemize}
+
+\subsection*{5) Troubleshooting a Common Error (5 Points)}
+A common error encountered: \textit{“Unable to load script”} due to Metro Bundler connection issues. Resolved by ensuring the device and computer are on the same network and clearing the cache.
+
+\section*{Task 2: Building a Simple To-Do List App (60 Points)}
+
+\subsection*{Explanation of Features Implemented}
+\begin{itemize}
+    \item \textbf{Add New Tasks:} The \texttt{handleTaskSubmit} function adds new tasks if the input is not empty.
+    \item \textbf{Update Existing Tasks:} Users can edit tasks, changing the input field and button state.
+    \item \textbf{Delete Tasks:} Tasks can be deleted with a confirmation alert.
+    \item \textbf{Scrollable Task List:} Implemented with \texttt{FlatList} for scrollability.
+    \item \textbf{User-Friendly Interface:} Clear buttons, and animations for task management.
+\end{itemize}
+
+\subsection*{Explanation of Code}
+\begin{itemize}
+    \item \textbf{State Management:} \texttt{useState} and \texttt{useEffect} manage state and persist tasks.
+    \item \textbf{Adding a Task:} \texttt{addTask} function creates new tasks with unique IDs.
+    \item \textbf{Deleting a Task:} \texttt{deleteTask} function removes tasks from the state.
+    \item \textbf{Toggling Completion:} \texttt{toggleTaskCompletion} applies strikethrough styles to completed tasks.
+    \item \textbf{Rendering the List:} Used \texttt{FlatList} to display tasks with deletion and completion toggling capabilities.
+\end{itemize}
+
+\end{document}
